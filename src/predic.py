@@ -24,9 +24,8 @@ def predict_next_month_income(model_type="linear"):
     
     df = prepare_monthly_data()
     if len(df) < 2:
-        return None  # pas assez de données
+        return None  
 
-    # Feature: mois indexé
     df['month_idx'] = np.arange(len(df))
     X = df[['month_idx']]
     y = df['income']
