@@ -1,4 +1,3 @@
-# plots.py
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -25,16 +24,12 @@ def plot_expenses_by_category_fig():
     ax.set_xlabel("Category")
     ax.set_ylabel("Amount")
     ax.tick_params(axis='x', rotation=30)
-    # annotations
     for i, row in expenses.iterrows():
         ax.text(i, row.amount + 0.01 * expenses["amount"].max(), f"{row.amount:.2f}", ha='center', va='bottom', fontsize=9)
     fig.tight_layout()
     return fig
 
 def plot_income_by_category_fig():
-    """
-    Retourne une Figure pour les revenus par catégorie.
-    """
     df = _prepare_data_copy()
     income = df[df["type"] == "income"].groupby("category")["amount"].sum().reset_index()
     fig = Figure(figsize=(8,5), dpi=100)
@@ -50,9 +45,6 @@ def plot_income_by_category_fig():
     return fig
 
 def plot_monthly_balance_fig():
-    """
-    Retourne une Figure montrant la balance mensuelle (income - expense).
-    """
     df = _prepare_data_copy()
     df['month'] = df['date'].dt.to_period('M').dt.to_timestamp()
     monthly = df.groupby(['month', 'type'])['amount'].sum().unstack(fill_value=0)
@@ -70,14 +62,11 @@ def plot_monthly_balance_fig():
     return fig
 
 def plot_income_vs_expenses_monthly_fig():
-    """
-    Retourne une Figure comparant revenus vs dépenses mensuels.
-    """
+    
     df = _prepare_data_copy()
     df['month'] = df['date'].dt.to_period('M').dt.to_timestamp()
     monthly = df.groupby(['month', 'type'])['amount'].sum().unstack(fill_value=0).reset_index()
 
-    # S'assurer que les colonnes existent
     if 'income' not in monthly.columns:
         monthly['income'] = 0
     if 'expense' not in monthly.columns:
