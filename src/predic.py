@@ -98,9 +98,6 @@ def predict_expense_trend(months_ahead=6):
     return pred
 
 def predict_balance_trend(months_ahead=6):
-    """
-    Prédit la balance pour les `months_ahead` prochains mois.
-    """
     income_pred = predict_income_trend(months_ahead)
     expense_pred = predict_expense_trend(months_ahead)
     return [i - e for i, e in zip(income_pred, expense_pred)]
