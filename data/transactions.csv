@@ -1,0 +1,16 @@
+id,date,type,amount,currency,category,description,payment_method,balance_after,Currency
+1.0,2025-08-01,income,2000.0,MAD,Salary,Salaire mensuel,Bank Transfer,2000.0,MAD
+2.0,2025-08-02,expense,150.0,MAD,Food,Courses supermarché,Credit Card,1850.0,
+3.0,2025-08-03,expense,60.0,MAD,Transport,Taxi,Cash,1790.0,
+5.0,2025-08-05,income,300.0,MAD,Freelance,Mission freelance,PayPal,1590.0,
+6.0,2025-08-06,expense,100.0,MAD,Entertainment,Sortie cinéma,Cash,1490.0,
+7.0,2025-08-07,expense,200.0,MAD,Shopping,Vêtements,Credit Card,1290.0,
+8.0,2025-08-08,expense,50.0,MAD,Food,Restaurant entre amis,Cash,1240.0,
+9.0,2025-08-09,income,100.0,MAD,Gift,Cadeau reçu,Cash,1340.0,
+10.0,2025-08-10,expense,80.0,MAD,Health,Médicaments,Credit Card,1260.0,
+11.0,2025-08-11,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,1140.0,
+12.0,2025-08-12,expense,300.0,MAD,Education,Cours en ligne,PayPal,840.0,
+13.0,2025-08-13,expense,90.0,MAD,Transport,Essence,Cash,750.0,
+14.0,2025-08-14,income,500.0,MAD,Investment,Dividendes,Bank Transfer,1250.0,
+15.0,2025-08-15,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,1050.0,
+,2023-10-10,expense,150.0,,entertainment,Movie night,,,
