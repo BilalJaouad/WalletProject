@@ -2,9 +2,9 @@ import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 from datetime import datetime
 import pandas as pd
-import wallet    # ton module principal (anciennement transactions)
-import plot      # module plots (retourne Figures)
-import predic    # module de prédiction
+import wallet    
+import plot      
+import predic    
 
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 try:
@@ -20,9 +20,7 @@ class WalletGUI:
         root.title("Wallet Manager")
         root.geometry("1200x700")
 
-        # --------------------------
-        # Contrôles supérieurs
-        # --------------------------
+
         ctrl_frame = ttk.Frame(root, padding=(10, 8))
         ctrl_frame.pack(fill="x", side="top")
 
@@ -44,7 +42,6 @@ class WalletGUI:
 
         ttk.Button(ctrl_frame, text="Ajouter", command=self.add_transaction).grid(row=0, column=10, padx=6)
 
-        # Recherche et filtrage
         ttk.Label(ctrl_frame, text="Recherche (description)").grid(row=1, column=0, padx=4, pady=6)
         self.entry_search = ttk.Entry(ctrl_frame, width=30); self.entry_search.grid(row=1, column=1, columnspan=3, sticky="w", padx=4)
         ttk.Button(ctrl_frame, text="Rechercher", command=self.search_transactions).grid(row=1, column=4, padx=4)
@@ -58,9 +55,7 @@ class WalletGUI:
         ttk.Button(ctrl_frame, text="Supprimer sélection", command=self.delete_selected).grid(row=1, column=10, padx=4)
         ttk.Button(ctrl_frame, text="Modifier sélection", command=self.edit_selected).grid(row=1, column=11, padx=4)
 
-        # --------------------------
-        # Frame central : Treeview + plots
-        # --------------------------
+  
         mid_frame = ttk.Frame(root, padding=(6,6))
         mid_frame.pack(fill="both", expand=True)
 
@@ -83,26 +78,20 @@ class WalletGUI:
         mid_frame.rowconfigure(0, weight=1)
         mid_frame.columnconfigure(0, weight=1)
 
-        # Frame plots à droite
+
         plots_frame = ttk.Frame(mid_frame, padding=(8,8))
         plots_frame.grid(row=0, column=2, sticky="ns", padx=8)
 
         ttk.Label(plots_frame, text="Plots", font=("TkDefaultFont", 10, "bold")).pack(pady=(2,6))
-        # Graphiques réels
         ttk.Button(plots_frame, text="Expenses by Category", width=28, command=lambda: self.open_plot(plot.plot_expenses_by_category_fig)).pack(pady=4)
         ttk.Button(plots_frame, text="Income by Category", width=28, command=lambda: self.open_plot(plot.plot_income_by_category_fig)).pack(pady=4)
         ttk.Button(plots_frame, text="Monthly Balance", width=28, command=lambda: self.open_plot(plot.plot_monthly_balance_fig)).pack(pady=4)
         ttk.Button(plots_frame, text="Income vs Expenses (monthly)", width=28, command=lambda: self.open_plot(plot.plot_income_vs_expenses_monthly_fig)).pack(pady=4)
 
-        # Prédictions ML
         ttk.Label(plots_frame, text="Prédictions ML", font=("TkDefaultFont", 10, "bold")).pack(pady=(12,6))
         ttk.Button(plots_frame, text="Predict Next Month Income", width=28, command=self.plot_predict_income).pack(pady=4)
         ttk.Button(plots_frame, text="Predict Next Month Expense", width=28, command=self.plot_predict_expense).pack(pady=4)
         ttk.Button(plots_frame, text="Predict Next Month Balance", width=28, command=self.plot_predict_balance).pack(pady=4)
-
-        # --------------------------
-        # Bottom
-        # --------------------------
         bottom_buttons = ttk.Frame(root, padding=(10,5))
         bottom_buttons.pack(fill="x", side="bottom")
         ttk.Button(bottom_buttons, text="Exporter PDF", command=self.export_pdf).pack(side="left", padx=6)
@@ -110,12 +99,10 @@ class WalletGUI:
         ttk.Button(bottom_buttons, text="Rafraîchir", command=self.load_transactions).pack(side="left", padx=6)
         ttk.Button(bottom_buttons, text="Tout effacer (CSV)", command=self.clear_all).pack(side="right", padx=6)
 
-        # Charger les transactions initiales
+
         self.load_transactions()
 
-    # --------------------------
-    # CRUD / affichage / filtres
-    # --------------------------
+
     def load_transactions(self, df=None):
         """Charge les transactions (par défaut toutes) dans le Treeview.
         Utilise des indices positionnels 0..n-1 pour les opérations (safe)."""
@@ -125,7 +112,6 @@ class WalletGUI:
         if df is None:
             df = wallet.get_all_transactions().copy()
 
-        # créer un index positionnel sûr pour usage dans le treeview
         df_display = df.reset_index(drop=True).reset_index()  # colonne 'index' = position 0..n-1
         for _, row in df_display.iterrows():
             iid = str(int(row["index"]))
@@ -139,13 +125,13 @@ class WalletGUI:
             self.tree.insert("", "end", iid=iid, values=values)
 
     def validate_entries(self, date_str, amount_str, txn_type):
-        # Date format
+
         try:
             datetime.strptime(date_str, "%Y-%m-%d")
         except Exception:
             messagebox.showerror("Erreur", "Format de date invalide. Utiliser YYYY-MM-DD.")
             return False
-        # Amount numeric > 0
+
         try:
             amt = float(amount_str)
             if amt <= 0:
@@ -154,7 +140,6 @@ class WalletGUI:
         except Exception:
             messagebox.showerror("Erreur", "Montant invalide.")
             return False
-        # Type
         if txn_type not in ("income", "expense"):
             messagebox.showerror("Erreur", "Type doit être 'income' ou 'expense'.")
             return False
@@ -173,7 +158,7 @@ class WalletGUI:
         try:
             wallet.add_transaction(date, float(amount), txn_type, category, description)
             messagebox.showinfo("OK", "Transaction ajoutée.")
-            # vider champs
+
             self.entry_date.delete(0, "end")
             self.entry_amount.delete(0, "end")
             self.entry_category.delete(0, "end")
@@ -187,7 +172,7 @@ class WalletGUI:
         if not sel:
             messagebox.showwarning("Info", "Aucune ligne sélectionnée.")
             return
-        idx = int(sel[0])  # position index
+        idx = int(sel[0])
         confirm = messagebox.askyesno("Confirmer", f"Supprimer la transaction #{idx} ?")
         if not confirm:
             return
@@ -203,14 +188,14 @@ class WalletGUI:
         if not sel:
             messagebox.showwarning("Info", "Aucune ligne sélectionnée.")
             return
-        idx = int(sel[0])  # position index
+        idx = int(sel[0])  
         df = wallet.get_all_transactions().reset_index(drop=True)
         if idx < 0 or idx >= len(df):
             messagebox.showerror("Erreur", "Index invalide.")
             return
         row = df.loc[idx]
 
-        # Fenêtre de modification simple
+
         edit = tk.Toplevel(self.root)
         edit.title(f"Modifier #{idx}")
         edit.geometry("420x260")
@@ -320,9 +305,6 @@ class WalletGUI:
         except Exception as e:
             messagebox.showerror("Erreur", f"Impossible d'effacer : {e}")
 
-    # --------------------------
-    # Plots embedding
-    # --------------------------
     def open_plot(self, fig_func):
         """
         Ouvre un plot matplotlib dans une nouvelle fenêtre.
@@ -361,9 +343,6 @@ class WalletGUI:
         btn_frame.pack(side="bottom", fill="x")
         ttk.Button(btn_frame, text="Save PNG", command=save_png).pack(side="right", padx=6)
 
-    # --------------------------
-    # Prédictions (ML)
-    # --------------------------
     def plot_predict_income(self):
         try:
             pred_value = predic.predict_next_month_income()
@@ -441,7 +420,6 @@ class WalletGUI:
             toolbar.pack(side="bottom", fill="x")
 
 
-# Pour debug local rapide uniquement (si tu exécutes gui.py directement)
 if __name__ == "__main__":
     root = tk.Tk()
     app = WalletGUI(root)
