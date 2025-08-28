@@ -97,3 +97,4 @@ Feel free to fork the project, make improvements, and submit pull requests.
 📌 Author
 
 Developed by Bilal Jaouad
+bilaljaouad7@gmail.com
