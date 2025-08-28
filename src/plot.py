@@ -8,8 +8,10 @@ sns.set_theme(style="whitegrid")
 
 def _prepare_data_copy():
     df = wallet.get_all_transactions().copy()
-    df['date'] = pd.to_datetime(df['date'])
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    df = df.dropna(subset=['date'])  
     return df
+
 
 def plot_expenses_by_category_fig():
     """

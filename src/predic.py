@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
@@ -8,10 +6,14 @@ import numpy as np
 import wallet  
 
 def prepare_monthly_data():
-    
     df = wallet.get_all_transactions().copy()
-    df['date'] = pd.to_datetime(df['date'])
+   
+    # Conversion sécurisée des dates avec drop des lignes invalides
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    df = df.dropna(subset=['date']) 
+
     df['month'] = df['date'].dt.to_period('M').dt.to_timestamp()
+    
     monthly = df.groupby(['month', 'type'])['amount'].sum().unstack(fill_value=0).reset_index()
     if 'income' not in monthly.columns:
         monthly['income'] = 0
@@ -20,8 +22,8 @@ def prepare_monthly_data():
     monthly['balance'] = monthly['income'] - monthly['expense']
     return monthly
 
+
 def predict_next_month_income(model_type="linear"):
-    
     df = prepare_monthly_data()
     if len(df) < 2:
         return None  
@@ -38,7 +40,6 @@ def predict_next_month_income(model_type="linear"):
     return max(prediction[0], 0)
 
 def predict_next_month_expense():
-    
     df = prepare_monthly_data()
     if len(df) < 2:
         return None
@@ -55,7 +56,6 @@ def predict_next_month_expense():
     return max(prediction[0], 0)
 
 def predict_next_month_balance():
-   
     income_pred = predict_next_month_income()
     expense_pred = predict_next_month_expense()
     if income_pred is None or expense_pred is None:
@@ -63,7 +63,6 @@ def predict_next_month_balance():
     return income_pred - expense_pred
 
 def predict_income_trend(months_ahead=6):
-   
     df = prepare_monthly_data()
     if len(df) < 2:
         return []
@@ -76,11 +75,9 @@ def predict_income_trend(months_ahead=6):
 
     future_idx = np.arange(len(df), len(df)+months_ahead).reshape(-1,1)
     pred = model.predict(future_idx)
-    pred = [max(p,0) for p in pred]
-    return pred
+    return [max(p,0) for p in pred]
 
 def predict_expense_trend(months_ahead=6):
-    
     df = prepare_monthly_data()
     if len(df) < 2:
         return []
@@ -93,8 +90,7 @@ def predict_expense_trend(months_ahead=6):
 
     future_idx = np.arange(len(df), len(df)+months_ahead).reshape(-1,1)
     pred = model.predict(future_idx)
-    pred = [max(p,0) for p in pred]
-    return pred
+    return [max(p,0) for p in pred]
 
 def predict_balance_trend(months_ahead=6):
     income_pred = predict_income_trend(months_ahead)

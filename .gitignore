@@ -1,1 +1,36 @@
+# --- Python cache ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Virtual environments ---
 venv/
+ENV/
+.venv/
+env/
+
+# --- Jupyter Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & temp files ---
+*.log
+*.tmp
+*.swp
+
+# --- Build / packaging ---
+build/
+dist/
+*.egg-info/
+
+# --- IDE / Editors ---
+.vscode/
+.idea/
+*.iml
+
+# --- Other ---
+*.sqlite3
+*.db

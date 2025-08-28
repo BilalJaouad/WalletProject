@@ -1,16 +1,201 @@
 id,date,type,amount,currency,category,description,payment_method,balance_after,Currency
-1.0,2025-08-01,income,2000.0,MAD,Salary,Salaire mensuel,Bank Transfer,2000.0,MAD
-2.0,2025-08-02,expense,150.0,MAD,Food,Courses supermarché,Credit Card,1850.0,
-3.0,2025-08-03,expense,60.0,MAD,Transport,Taxi,Cash,1790.0,
-5.0,2025-08-05,income,300.0,MAD,Freelance,Mission freelance,PayPal,1590.0,
-6.0,2025-08-06,expense,100.0,MAD,Entertainment,Sortie cinéma,Cash,1490.0,
-7.0,2025-08-07,expense,200.0,MAD,Shopping,Vêtements,Credit Card,1290.0,
-8.0,2025-08-08,expense,50.0,MAD,Food,Restaurant entre amis,Cash,1240.0,
-9.0,2025-08-09,income,100.0,MAD,Gift,Cadeau reçu,Cash,1340.0,
-10.0,2025-08-10,expense,80.0,MAD,Health,Médicaments,Credit Card,1260.0,
-11.0,2025-08-11,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,1140.0,
-12.0,2025-08-12,expense,300.0,MAD,Education,Cours en ligne,PayPal,840.0,
-13.0,2025-08-13,expense,90.0,MAD,Transport,Essence,Cash,750.0,
-14.0,2025-08-14,income,500.0,MAD,Investment,Dividendes,Bank Transfer,1250.0,
-15.0,2025-08-15,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,1050.0,
-,2023-10-10,expense,150.0,,entertainment,Movie night,,,
+16.0,2025-08-16,expense,75.0,MAD,Food,Déjeuner au café,Cash,975.0,MAD
+17.0,2025-08-17,expense,120.0,MAD,Transport,Essence voiture,Credit Card,855.0,MAD
+18.0,2025-08-18,income,250.0,MAD,Freelance,Mission freelance,PayPal,1105.0,MAD
+19.0,2025-08-19,expense,60.0,MAD,Health,Visite médecin,Cash,1045.0,MAD
+20.0,2025-08-20,expense,90.0,MAD,Entertainment,Sortie théâtre,Credit Card,955.0,MAD
+21.0,2025-08-21,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,2455.0,MAD
+22.0,2025-08-22,expense,200.0,MAD,Shopping,Vêtements,Credit Card,2255.0,MAD
+23.0,2025-08-23,expense,50.0,MAD,Food,Épicerie,Cash,2205.0,MAD
+24.0,2025-08-24,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,2105.0,MAD
+25.0,2025-08-25,income,400.0,MAD,Gift,Cadeau reçu,Cash,2505.0,MAD
+26.0,2025-08-26,expense,180.0,MAD,Transport,Taxi,Cash,2325.0,MAD
+27.0,2025-08-27,expense,250.0,MAD,Education,Cours en ligne,PayPal,2075.0,MAD
+28.0,2025-08-28,income,600.0,MAD,Investment,Dividendes,Bank Transfer,2675.0,MAD
+29.0,2025-08-29,expense,300.0,MAD,Savings,Virement compte épargne,Bank Transfer,2375.0,MAD
+30.0,2025-08-30,expense,70.0,MAD,Food,Restaurant,Cash,2305.0,MAD
+31.0,2025-08-31,expense,40.0,MAD,Entertainment,Cinéma,Credit Card,2265.0,MAD
+32.0,2025-09-01,income,2000.0,MAD,Salary,Salaire mensuel,Bank Transfer,4265.0,MAD
+33.0,2025-09-02,expense,150.0,MAD,Shopping,Chaussures,Credit Card,4115.0,MAD
+34.0,2025-09-03,expense,60.0,MAD,Transport,Essence,Cash,4055.0,MAD
+35.0,2025-09-04,expense,90.0,MAD,Health,Pharmacie,Credit Card,3965.0,MAD
+36.0,2025-09-05,income,300.0,MAD,Freelance,Mission freelance,PayPal,4265.0,MAD
+37.0,2025-09-06,expense,100.0,MAD,Utilities,Facture électricité,Bank Transfer,4165.0,MAD
+38.0,2025-09-07,expense,200.0,MAD,Shopping,Vêtements,Credit Card,3965.0,MAD
+39.0,2025-09-08,expense,50.0,MAD,Food,Restaurant entre amis,Cash,3915.0,MAD
+40.0,2025-09-09,income,100.0,MAD,Gift,Cadeau reçu,Cash,4015.0,MAD
+41.0,2025-09-10,expense,80.0,MAD,Health,Médicaments,Credit Card,3935.0,MAD
+42.0,2025-09-11,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,3815.0,MAD
+43.0,2025-09-12,expense,300.0,MAD,Education,Cours en ligne,PayPal,3515.0,MAD
+44.0,2025-09-13,expense,90.0,MAD,Transport,Essence,Cash,3425.0,MAD
+45.0,2025-09-14,income,500.0,MAD,Investment,Dividendes,Bank Transfer,3925.0,MAD
+46.0,2025-09-15,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,3725.0,MAD
+47.0,2025-09-16,expense,75.0,MAD,Food,Déjeuner rapide,Cash,3650.0,MAD
+48.0,2025-09-17,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,3600.0,MAD
+49.0,2025-09-18,income,250.0,MAD,Freelance,Mission freelance,PayPal,3850.0,MAD
+50.0,2025-09-19,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,3750.0,MAD
+51.0,2025-09-20,expense,180.0,MAD,Transport,Taxi,Cash,3570.0,MAD
+65.0,2025-09-21,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,5070.0,MAD
+52.0,2025-09-21,expense,90.0,MAD,Food,Dîner en famille,Cash,3480.0,MAD
+53.0,2025-09-22,expense,60.0,MAD,Transport,Taxi,Credit Card,3420.0,MAD
+54.0,2025-09-23,income,200.0,MAD,Freelance,Mission freelance,PayPal,3620.0,MAD
+55.0,2025-09-24,expense,80.0,MAD,Health,Médicaments,Credit Card,3540.0,MAD
+56.0,2025-09-25,expense,120.0,MAD,Entertainment,Concert,Cash,3420.0,MAD
+57.0,2025-09-26,income,2500.0,MAD,Salary,Salaire mensuel,Bank Transfer,5920.0,MAD
+58.0,2025-09-27,expense,300.0,MAD,Shopping,Nouveaux vêtements,Credit Card,5620.0,MAD
+59.0,2025-09-28,expense,50.0,MAD,Food,Épicerie,Cash,5570.0,MAD
+60.0,2025-09-29,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,5470.0,MAD
+61.0,2025-09-30,income,350.0,MAD,Gift,Cadeau reçu,Cash,5820.0,MAD
+62.0,2025-10-01,expense,200.0,MAD,Transport,Essence,Cash,5620.0,MAD
+63.0,2025-10-02,expense,250.0,MAD,Education,Cours en ligne,PayPal,5370.0,MAD
+64.0,2025-10-03,income,700.0,MAD,Investment,Dividendes,Bank Transfer,6070.0,MAD
+65.0,2025-10-04,expense,180.0,MAD,Savings,Virement compte épargne,Bank Transfer,5890.0,MAD
+66.0,2025-10-05,expense,70.0,MAD,Food,Déjeuner rapide,Cash,5820.0,MAD
+67.0,2025-10-06,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,5770.0,MAD
+68.0,2025-10-07,income,300.0,MAD,Freelance,Mission freelance,PayPal,6070.0,MAD
+69.0,2025-10-08,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,5970.0,MAD
+70.0,2025-10-09,expense,150.0,MAD,Transport,Taxi,Cash,5820.0,MAD
+71.0,2025-10-10,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,7320.0,MAD
+72.0,2025-10-11,expense,250.0,MAD,Shopping,Chaussures,Credit Card,7070.0,MAD
+73.0,2025-10-12,expense,60.0,MAD,Food,Épicerie,Cash,7010.0,MAD
+74.0,2025-10-13,expense,90.0,MAD,Health,Pharmacie,Credit Card,6920.0,MAD
+75.0,2025-10-14,income,400.0,MAD,Freelance,Mission freelance,PayPal,7320.0,MAD
+76.0,2025-10-15,expense,100.0,MAD,Utilities,Facture électricité,Bank Transfer,7220.0,MAD
+77.0,2025-10-16,expense,200.0,MAD,Shopping,Vêtements,Credit Card,7020.0,MAD
+78.0,2025-10-17,expense,50.0,MAD,Food,Restaurant entre amis,Cash,6970.0,MAD
+79.0,2025-10-18,income,100.0,MAD,Gift,Cadeau reçu,Cash,7070.0,MAD
+80.0,2025-10-19,expense,80.0,MAD,Health,Médicaments,Credit Card,6990.0,MAD
+81.0,2025-10-20,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,6870.0,MAD
+82.0,2025-10-21,expense,300.0,MAD,Education,Cours en ligne,PayPal,6570.0,MAD
+83.0,2025-10-22,expense,90.0,MAD,Transport,Essence,Cash,6480.0,MAD
+84.0,2025-10-23,income,500.0,MAD,Investment,Dividendes,Bank Transfer,6980.0,MAD
+85.0,2025-10-24,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,6780.0,MAD
+86.0,2025-10-25,expense,75.0,MAD,Food,Déjeuner rapide,Cash,6705.0,MAD
+87.0,2025-10-26,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,6655.0,MAD
+88.0,2025-10-27,income,250.0,MAD,Freelance,Mission freelance,PayPal,6905.0,MAD
+89.0,2025-10-28,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,6805.0,MAD
+90.0,2025-10-29,expense,180.0,MAD,Transport,Taxi,Cash,6625.0,MAD
+91.0,2025-10-30,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,8125.0,MAD
+92.0,2025-10-31,expense,250.0,MAD,Shopping,Nouveaux vêtements,Credit Card,7875.0,MAD
+93.0,2025-11-01,expense,50.0,MAD,Food,Épicerie,Cash,7825.0,MAD
+94.0,2025-11-02,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,7725.0,MAD
+95.0,2025-11-03,income,300.0,MAD,Freelance,Mission freelance,PayPal,8025.0,MAD
+96.0,2025-11-04,expense,180.0,MAD,Transport,Essence,Cash,7845.0,MAD
+97.0,2025-11-05,expense,120.0,MAD,Entertainment,Sortie cinéma,Credit Card,7725.0,MAD
+98.0,2025-11-06,income,2000.0,MAD,Salary,Salaire mensuel,Bank Transfer,9725.0,MAD
+99.0,2025-11-07,expense,300.0,MAD,Shopping,Chaussures,Credit Card,9425.0,MAD
+100.0,2025-11-08,expense,60.0,MAD,Food,Dîner en famille,Cash,9365.0,MAD
+101.0,2025-11-09,expense,90.0,MAD,Health,Pharmacie,Credit Card,9275.0,MAD
+102.0,2025-11-10,income,400.0,MAD,Gift,Cadeau reçu,Cash,9675.0,MAD
+103.0,2025-11-11,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,9575.0,MAD
+104.0,2025-11-12,expense,150.0,MAD,Transport,Taxi,Cash,9425.0,MAD
+105.0,2025-11-13,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,10925.0,MAD
+106.0,2025-11-14,expense,250.0,MAD,Shopping,Vêtements,Credit Card,10675.0,MAD
+107.0,2025-11-15,expense,50.0,MAD,Food,Épicerie,Cash,10625.0,MAD
+108.0,2025-11-16,expense,90.0,MAD,Health,Médicaments,Credit Card,10535.0,MAD
+109.0,2025-11-17,income,300.0,MAD,Freelance,Mission freelance,PayPal,10835.0,MAD
+110.0,2025-11-18,expense,100.0,MAD,Utilities,Facture électricité,Bank Transfer,10735.0,MAD
+111.0,2025-11-19,expense,200.0,MAD,Shopping,Nouveaux vêtements,Credit Card,10535.0,MAD
+112.0,2025-11-20,expense,50.0,MAD,Food,Restaurant entre amis,Cash,10485.0,MAD
+113.0,2025-11-21,income,100.0,MAD,Gift,Cadeau reçu,Cash,10585.0,MAD
+114.0,2025-11-22,expense,80.0,MAD,Health,Médicaments,Credit Card,10505.0,MAD
+115.0,2025-11-23,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,10385.0,MAD
+116.0,2025-11-24,expense,300.0,MAD,Education,Cours en ligne,PayPal,10085.0,MAD
+117.0,2025-11-25,expense,90.0,MAD,Transport,Essence,Cash,9985.0,MAD
+118.0,2025-11-26,income,500.0,MAD,Investment,Dividendes,Bank Transfer,10485.0,MAD
+119.0,2025-11-27,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,10285.0,MAD
+120.0,2025-11-28,expense,75.0,MAD,Food,Déjeuner rapide,Cash,10210.0,MAD
+121.0,2025-11-29,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,10160.0,MAD
+122.0,2025-11-30,income,250.0,MAD,Freelance,Mission freelance,PayPal,10410.0,MAD
+123.0,2025-12-01,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,10310.0,MAD
+124.0,2025-12-02,expense,180.0,MAD,Transport,Taxi,Cash,10130.0,MAD
+125.0,2025-12-03,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,11630.0,MAD
+126.0,2025-12-04,expense,250.0,MAD,Shopping,Chaussures,Credit Card,11380.0,MAD
+127.0,2025-12-05,expense,60.0,MAD,Food,Épicerie,Cash,11320.0,MAD
+128.0,2025-12-06,expense,90.0,MAD,Health,Pharmacie,Credit Card,11230.0,MAD
+129.0,2025-12-07,income,400.0,MAD,Gift,Cadeau reçu,Cash,11630.0,MAD
+130.0,2025-12-08,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,11530.0,MAD
+131.0,2025-12-09,expense,150.0,MAD,Transport,Taxi,Cash,11380.0,MAD
+132.0,2025-12-10,income,2000.0,MAD,Salary,Salaire mensuel,Bank Transfer,13380.0,MAD
+133.0,2025-12-11,expense,300.0,MAD,Shopping,Nouveaux vêtements,Credit Card,13080.0,MAD
+134.0,2025-12-12,expense,50.0,MAD,Food,Dîner en famille,Cash,13030.0,MAD
+135.0,2025-12-13,expense,90.0,MAD,Health,Médicaments,Credit Card,12940.0,MAD
+136.0,2025-12-14,income,350.0,MAD,Freelance,Mission freelance,PayPal,13290.0,MAD
+137.0,2025-12-15,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,13190.0,MAD
+138.0,2025-12-16,expense,180.0,MAD,Transport,Taxi,Cash,13010.0,MAD
+139.0,2025-12-17,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,14510.0,MAD
+140.0,2025-12-18,expense,250.0,MAD,Shopping,Chaussures,Credit Card,14260.0,MAD
+141.0,2025-12-19,expense,60.0,MAD,Food,Épicerie,Cash,14200.0,MAD
+142.0,2025-12-20,expense,90.0,MAD,Health,Pharmacie,Credit Card,14110.0,MAD
+143.0,2025-12-21,income,400.0,MAD,Gift,Cadeau reçu,Cash,14510.0,MAD
+144.0,2025-12-22,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,14410.0,MAD
+145.0,2025-12-23,expense,150.0,MAD,Transport,Essence,Cash,14260.0,MAD
+146.0,2025-12-24,income,500.0,MAD,Investment,Dividendes,Bank Transfer,14760.0,MAD
+147.0,2025-12-25,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,14560.0,MAD
+148.0,2025-12-26,expense,75.0,MAD,Food,Déjeuner rapide,Cash,14485.0,MAD
+149.0,2025-12-27,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,14435.0,MAD
+150.0,2025-12-28,income,250.0,MAD,Freelance,Mission freelance,PayPal,14685.0,MAD
+151.0,2025-12-29,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,14585.0,MAD
+152.0,2025-12-30,expense,180.0,MAD,Transport,Taxi,Cash,14405.0,MAD
+153.0,2025-12-31,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,15905.0,MAD
+154.0,2026-01-01,expense,250.0,MAD,Shopping,Vêtements,Credit Card,15655.0,MAD
+155.0,2026-01-02,expense,50.0,MAD,Food,Épicerie,Cash,15605.0,MAD
+156.0,2026-01-03,expense,90.0,MAD,Health,Pharmacie,Credit Card,15515.0,MAD
+157.0,2026-01-04,income,400.0,MAD,Gift,Cadeau reçu,Cash,15915.0,MAD
+158.0,2026-01-05,expense,100.0,MAD,Utilities,Facture électricité,Bank Transfer,15815.0,MAD
+159.0,2026-01-06,expense,200.0,MAD,Shopping,Nouveaux vêtements,Credit Card,15615.0,MAD
+160.0,2026-01-07,expense,50.0,MAD,Food,Restaurant entre amis,Cash,15565.0,MAD
+161.0,2026-01-08,income,100.0,MAD,Gift,Cadeau reçu,Cash,15665.0,MAD
+162.0,2026-01-09,expense,80.0,MAD,Health,Médicaments,Credit Card,15585.0,MAD
+163.0,2026-01-10,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,15465.0,MAD
+164.0,2026-01-11,expense,300.0,MAD,Education,Cours en ligne,PayPal,15165.0,MAD
+165.0,2026-01-12,expense,90.0,MAD,Transport,Essence,Cash,15075.0,MAD
+166.0,2026-01-13,income,500.0,MAD,Investment,Dividendes,Bank Transfer,15575.0,MAD
+167.0,2026-01-14,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,15375.0,MAD
+168.0,2026-01-15,expense,75.0,MAD,Food,Déjeuner rapide,Cash,15300.0,MAD
+169.0,2026-01-16,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,15250.0,MAD
+170.0,2026-01-17,income,250.0,MAD,Freelance,Mission freelance,PayPal,15500.0,MAD
+171.0,2026-01-18,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,15400.0,MAD
+172.0,2026-01-19,expense,180.0,MAD,Transport,Taxi,Cash,15220.0,MAD
+173.0,2026-01-20,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,16720.0,MAD
+174.0,2026-01-21,expense,250.0,MAD,Shopping,Vêtements,Credit Card,16470.0,MAD
+175.0,2026-01-22,expense,50.0,MAD,Food,Épicerie,Cash,16420.0,MAD
+176.0,2026-01-23,expense,90.0,MAD,Health,Médicaments,Credit Card,16330.0,MAD
+177.0,2026-01-24,income,350.0,MAD,Freelance,Mission freelance,PayPal,16680.0,MAD
+178.0,2026-01-25,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,16580.0,MAD
+179.0,2026-01-26,expense,180.0,MAD,Transport,Taxi,Cash,16400.0,MAD
+180.0,2026-01-27,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,17900.0,MAD
+181.0,2026-01-28,expense,300.0,MAD,Shopping,Chaussures,Credit Card,17600.0,MAD
+182.0,2026-01-29,expense,60.0,MAD,Food,Dîner en famille,Cash,17540.0,MAD
+183.0,2026-01-30,expense,90.0,MAD,Health,Pharmacie,Credit Card,17450.0,MAD
+184.0,2026-01-31,income,400.0,MAD,Gift,Cadeau reçu,Cash,17850.0,MAD
+185.0,2026-02-01,expense,100.0,MAD,Utilities,Facture eau,Bank Transfer,17750.0,MAD
+186.0,2026-02-02,expense,150.0,MAD,Transport,Essence,Cash,17600.0,MAD
+187.0,2026-02-03,income,500.0,MAD,Investment,Dividendes,Bank Transfer,18100.0,MAD
+188.0,2026-02-04,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,17900.0,MAD
+189.0,2026-02-05,expense,75.0,MAD,Food,Déjeuner rapide,Cash,17825.0,MAD
+190.0,2026-02-06,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,17775.0,MAD
+191.0,2026-02-07,income,250.0,MAD,Freelance,Mission freelance,PayPal,18025.0,MAD
+192.0,2026-02-08,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,17925.0,MAD
+193.0,2026-02-09,expense,180.0,MAD,Transport,Taxi,Cash,17745.0,MAD
+194.0,2026-02-10,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,19245.0,MAD
+195.0,2026-02-11,expense,250.0,MAD,Shopping,Vêtements,Credit Card,18995.0,MAD
+196.0,2026-02-12,expense,50.0,MAD,Food,Épicerie,Cash,18945.0,MAD
+197.0,2026-02-13,expense,90.0,MAD,Health,Médicaments,Credit Card,18855.0,MAD
+198.0,2026-02-14,income,350.0,MAD,Freelance,Mission freelance,PayPal,19205.0,MAD
+199.0,2026-02-15,expense,100.0,MAD,Utilities,Facture électricité,Bank Transfer,19105.0,MAD
+200.0,2026-02-16,expense,200.0,MAD,Shopping,Nouveaux vêtements,Credit Card,18905.0,MAD
+201.0,2026-02-17,expense,50.0,MAD,Food,Restaurant entre amis,Cash,18855.0,MAD
+202.0,2026-02-18,income,100.0,MAD,Gift,Cadeau reçu,Cash,18955.0,MAD
+203.0,2026-02-19,expense,80.0,MAD,Health,Médicaments,Credit Card,18875.0,MAD
+204.0,2026-02-20,expense,120.0,MAD,Utilities,Facture électricité,Bank Transfer,18755.0,MAD
+205.0,2026-02-21,expense,300.0,MAD,Education,Cours en ligne,PayPal,18455.0,MAD
+206.0,2026-02-22,expense,90.0,MAD,Transport,Essence,Cash,18365.0,MAD
+207.0,2026-02-23,income,500.0,MAD,Investment,Dividendes,Bank Transfer,18865.0,MAD
+208.0,2026-02-24,expense,200.0,MAD,Savings,Virement compte épargne,Bank Transfer,18665.0,MAD
+209.0,2026-02-25,expense,75.0,MAD,Food,Déjeuner rapide,Cash,18590.0,MAD
+210.0,2026-02-26,expense,50.0,MAD,Entertainment,Cinéma,Credit Card,18540.0,MAD
+211.0,2026-02-27,income,250.0,MAD,Freelance,Mission freelance,PayPal,18790.0,MAD
+212.0,2026-02-28,expense,100.0,MAD,Utilities,Facture gaz,Bank Transfer,18690.0,MAD
+213.0,2026-02-29,expense,180.0,MAD,Transport,Taxi,Cash,18510.0,MAD
+214.0,2026-03-01,income,1500.0,MAD,Salary,Salaire mensuel,Bank Transfer,20010.0,MAD

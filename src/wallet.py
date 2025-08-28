@@ -1,6 +1,7 @@
 import pandas as pd
 from fpdf import FPDF
-
+import os
+from datetime import datetime
 
 PATH = r"WalletProject\data\transactions.csv"
 data = pd.read_csv(PATH)
@@ -156,7 +157,7 @@ def design_report():
 
     return report
 def export_report_to_pdf(filename="financial_report.pdf", logo_path="logo.png"):
-    data = get_all_transactions()  # DataFrame avec colonnes date, amount, type, category, description, Currency
+    data = get_all_transactions()  # récupère toutes les transactions
     
     total_income = get_total_income()
     total_expenses = get_total_expenses()
@@ -170,8 +171,14 @@ def export_report_to_pdf(filename="financial_report.pdf", logo_path="logo.png"):
     
     # --- Logo ---
     if logo_path:
-        pdf.image(logo_path, x=10, y=8, w=30)
+        # Construire le chemin absolu à partir du fichier courant
+        logo_full_path = os.path.join(os.path.dirname(__file__), logo_path)
+        if os.path.exists(logo_full_path):
+            pdf.image(logo_full_path, x=10, y=8, w=30)
+        else:
+            print(f"Logo introuvable : {logo_full_path}")
     
+    # --- Title ---
     pdf.set_font("Arial","B",16)
     pdf.cell(0, 10, "--- Financial Report ---", ln=True, align="C")
     pdf.ln(10)
@@ -232,8 +239,12 @@ def export_report_to_pdf(filename="financial_report.pdf", logo_path="logo.png"):
         pdf.cell(col_widths[5], th, str(row.get("Currency","MAD")), border=1, align="C")
         pdf.ln(th)
     
+    # --- Footer ---
+    pdf.set_y(-20)
+    pdf.set_font("Arial","I",10)
+    pdf.cell(0,10,f"Report generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", align="C")
+    
     pdf.output(filename)
-
 
 def get_statistics():
     stats = {
