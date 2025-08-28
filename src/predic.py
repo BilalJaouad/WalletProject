@@ -1,8 +1,4 @@
-"""
-Module de prédiction financière
-Prédit les revenus ou dépenses futurs à partir de l'historique.
-Utilise sklearn pour la régression linéaire ou d'autres modèles.
-"""
+
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -12,10 +8,7 @@ import numpy as np
 import wallet  
 
 def prepare_monthly_data():
-    """
-    Retourne un DataFrame avec les totaux mensuels pour income et expense.
-    Colonnes : month (datetime), income, expense
-    """
+    
     df = wallet.get_all_transactions().copy()
     df['date'] = pd.to_datetime(df['date'])
     df['month'] = df['date'].dt.to_period('M').dt.to_timestamp()
@@ -28,10 +21,7 @@ def prepare_monthly_data():
     return monthly
 
 def predict_next_month_income(model_type="linear"):
-    """
-    Prédit le revenu du prochain mois.
-    model_type: 'linear' (actuellement)
-    """
+    
     df = prepare_monthly_data()
     if len(df) < 2:
         return None  # pas assez de données
@@ -49,9 +39,7 @@ def predict_next_month_income(model_type="linear"):
     return max(prediction[0], 0)
 
 def predict_next_month_expense():
-    """
-    Prédit les dépenses du mois prochain via régression linéaire.
-    """
+    
     df = prepare_monthly_data()
     if len(df) < 2:
         return None
@@ -68,9 +56,7 @@ def predict_next_month_expense():
     return max(prediction[0], 0)
 
 def predict_next_month_balance():
-    """
-    Prédit la balance du mois prochain.
-    """
+   
     income_pred = predict_next_month_income()
     expense_pred = predict_next_month_expense()
     if income_pred is None or expense_pred is None:
@@ -78,9 +64,7 @@ def predict_next_month_balance():
     return income_pred - expense_pred
 
 def predict_income_trend(months_ahead=6):
-    """
-    Prédit le revenu pour les `months_ahead` prochains mois et retourne une liste.
-    """
+   
     df = prepare_monthly_data()
     if len(df) < 2:
         return []
@@ -97,9 +81,7 @@ def predict_income_trend(months_ahead=6):
     return pred
 
 def predict_expense_trend(months_ahead=6):
-    """
-    Prédit les dépenses pour les `months_ahead` prochains mois.
-    """
+    
     df = prepare_monthly_data()
     if len(df) < 2:
         return []
